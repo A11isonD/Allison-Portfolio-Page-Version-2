@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: Varela Round, Sans-Serif;
+    font-family: Noto Serif, Serif;
+    
+    background-color: #dddddd;
+    
+}
+header {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    /*Note: Pluralsight puts left margin at 0 b/c they want the links on 
+    the left side and width: 100% but when I put width: 100% 
+    it moved the links to the left side and I want to keep 
+    them on the right, so I'm leaving the width: 100% out for now.*/
+    background-color: cccccc;
+    padding: 10px;
+}
+
+h1, h2 {
+    margin-top: 0;
+    margin-left: 2px;
+    padding: .25em;
+    font-family: Varela Round, Sans-Serif;
+}
+
+h1 {
+    font-size: 2em;
+    margin-top: .5em;
+
+}
+
+h2 {
+    margin-top: 0;
+}
+
+
+nav a:visited,
+nav a:link {
+    color: #595e76;
+    text-decoration: none;
+    font-family: Varela Round, Sans-Serif;
+    
+}
+
+nav > ul {
+    display: inline;
+    padding: 0;
+}
+
+nav > ul > li {
+    display: inline-block;
+    list-style: none;
+    margin: 0 5px 0 5px;
+}
+
+main {
+    display: block;
+    background-color: cccccc;/*Maybe make this like a table with alt colors
+    The video puts a repeated bg image here*/
+    padding-top: 3em;
+    padding-bottom: 3em;
+    min-height: 85%;
+    
+}
+
+.banner {
+    max-width: 100%;
+}
+
+p {
+    margin: .5em 0 .5em 2px;
+    padding-left: .25em;
+}
+
+article {
+    padding: 2em;
+    width: 75%;
+}
+
+footer {
+    padding: 15px;
+}
+
+@media only screen and (min-width: 768px) {
+    main {
+        display: flex;
+    }
+}

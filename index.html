@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif|Varela+Round">
+    <title>Allison Dobbs' Portfolio Page</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <Li><a href="#About_Me">About Me</a></Li>
+                <Li><a href="#Projects">Projects</a></Li>
+                <Li><a href="#Work_Experience">Work Experience</a></Li>
+                <Li><a href="#Contact">Contact</a></Li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Allison Dobbs | Web Developer</h1>
+        <h2>Welcome to my page!  I'm glad you're here.</h2>
+       
+        <img src="/Images/OregonBeach.jpeg" class="banner" alt="OregonBeach">
+        
+        <article>
+        <h2 id="About_Me">About Me</h2>
+        <p>Mattis pellentesque id nibh tortor. Cras pulvinar mattis nunc sed blandit libero volutpat sed. Metus vulputate eu scelerisque felis. Cursus turpis massa tincidunt dui ut. Risus pretium quam vulputate dignissim. </p>
+
+        
+        <h2 id="Projects">Projects</h2>
+        <p>Risus commodo viverra maecenas accumsan lacus vel facilisis volutpat. Lectus vestibulum mattis ullamcorper velit. Dolor sit amet consectetur adipiscing elit ut aliquam purus sit. Ac placerat vestibulum lectus mauris. </p>
+        
+        
+        <h2 id="Work_Experience">Work Experience</h2>
+        <p>Imperdiet dui accumsan sit amet nulla facilisi. Ac tortor dignissim convallis aenean et tortor at risus viverra. Tortor aliquam nulla facilisi cras fermentum. Arcu non sodales neque sodales ut etiam. Est pellentesque elit ullamcorper dignissim. </p>
+           
+
+        <h2>Contact</h2>
+        <form action="mailto:allisonkdobbs@gmail.com" method="get"></form>
+            <div class="name">
+                <label for="name"></label>
+                <input type="text" placeholder="Name" id="name" name="name">
+                <small class="error"></small>
+            </div>
+            <br>
+            <div class="email">
+                <label for="email"></label>
+                <input type="email" placeholder="Email" id="email" name="email">
+                <small class="error"></small>
+            </div>
+            <br>
+            <div class="Your_message">
+                <label for="Your_message"></label><br>
+                <textarea name="Your_message" id="Your_message" cols="30" rows="10" placeholder="Enter your message here..."></textarea>
+                <small class="error"></small>
+            </div>
+            <br>
+            <div class="submit_button_container">
+                <!--<button id="submit" type="submit">Send</button>-->
+                <input type="submit" value="Send Message">
+                <p id="success"></p>
+            </div>
+        </form>
+           
+        </article>
+    </main>
+
+    <footer>
+        <small>Copyright © 2022 Allison Dobbs.  All Rights Reserved.</small>
+        <!--Put email, phone, LinkedIn, Github here (I think)-->        
+    </footer>
+</body>
+</html>
