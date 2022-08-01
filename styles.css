@@ -3,96 +3,404 @@
 }
 
 html, body {
-    height: 100%;
+    height: 100%;   
 }
+
 
 body {
     font-family: Varela Round, Sans-Serif;
     font-family: Noto Serif, Serif;
     
-    background-color: #dddddd;
-    
+    background-color: #f5f5f5;    
 }
+
+
 header {
     display: block;
-    position: fixed;
+    margin-top: 40px;
     top: 0;
     right: 0;
     /*Note: Pluralsight puts left margin at 0 b/c they want the links on 
     the left side and width: 100% but when I put width: 100% 
     it moved the links to the left side and I want to keep 
     them on the right, so I'm leaving the width: 100% out for now.*/
-    background-color: cccccc;
+    background-color: #cccccc;
     padding: 10px;
 }
+
+
+li {
+    list-style: none;
+}
+
+a {
+    color: #222224;
+    text-decoration: none;
+    font-family: Varela Round, Sans-Serif;
+    font-size: 1.3em;
+}
+
 
 h1, h2 {
     margin-top: 0;
     margin-left: 2px;
-    padding: .25em;
     font-family: Varela Round, Sans-Serif;
+    color: #222224;
+    
+    
+    
+    /*#595e76 - bluish gray color*/
+
 }
 
 h1 {
     font-size: 2em;
     margin-top: .5em;
-
+    padding: .25em
+    
 }
 
 h2 {
     margin-top: 0;
+    padding-bottom: .5em;
+    padding-left: .25em;
+}
+
+.header-h2 {
+    font-size: 1.7em;
+    flex-wrap: wrap;
 }
 
 
-nav a:visited,
+/*nav a:visited,
 nav a:link {
-    color: #595e76;
+    color: #222224; 
     text-decoration: none;
-    font-family: Varela Round, Sans-Serif;
+    font-family: Varela Round, Sans-Serif;   
+}*/
+
+/*nav a:hover {
+    color: #4f80db;
+}*/
+
+/*from youtube JavaScript - How to Create a Responsive Hamburger Menu
+with HTML, CSS, and JavaScript*/
+.navbar {
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items:;
+    gap: 60px;
+
+}
+
+.nav-link {
+    transition: 0.5s ease;
     
 }
 
-nav > ul {
-    display: inline;
-    padding: 0;
+.nav-link:hover {
+    color: #4f80db;
 }
 
-nav > ul > li {
-    display: inline-block;
+
+#hamburgerBtn {
+    background: none;
+    border: none;
+    color: #222224;
+    font-size: 2.3rem;
+    cursor: pointer;
+    padding: 0 20px 0 2vw;
+    /*margin-top: 0;
+    margin-right: 0;*/
+}
+
+
+/* !Instead of this, I'm reinstating my original hamburgerBtn 
+with the entity &#9776; to see what happens.  I changed the HTML!
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    color: #222224;
+}  See below  */
+
+
+/*nav > ul {
+    display: inline;
+    margin-bottom: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    width: 100%; /*still having dashed lines in half of the container*/
+    /*justify-content: flex-end;
+    display: none;*/
+   
+     
+    /*display: flex; - this does the same thing as display: inline-block
+    flex-direction: row;
+    Trying to get nav items on the right:
+    align-items: flex-end; - this did nothing
+    align-content: flex-end; - this did nothing
+    align-self: flex-end; - this did nothing 
+    justify-content: flex-end;- nothing
+    margin-right: 0; - this did nothing
+    margin-left: 50px; - moved it a bit and I could
+    prob make it 300px margin but it prob won't be responsive
+    since px is a fixed value*/
+    
+
+
+
+/* From prev version:
+nav ul {
+    margin: 0;
+    padding: 0;
+    display: none;
+
+}*/
+
+/*nav ul.open {
+    display: block; 
+}*/ 
+
+
+/*nav > ul > li {
+   /* display: inline-block; - this is what the guy in the video 
+   (a different one) did- 
+    
     list-style: none;
     margin: 0 5px 0 5px;
-}
+    font-size: 1.5em;
+    padding-left: .4em;
+    padding-right: .4em;
+
+}*/
+
+
 
 main {
     display: block;
-    background-color: cccccc;/*Maybe make this like a table with alt colors
+    background-color:cccccc;/* ? Maybe make this like a table with alt colors
     The video puts a repeated bg image here*/
-    padding-top: 3em;
+    padding-top: 2em;
     padding-bottom: 3em;
     min-height: 85%;
+    
     
 }
 
 .banner {
     max-width: 100%;
+    padding: .25em;
 }
 
 p {
     margin: .5em 0 .5em 2px;
     padding-left: .25em;
+    color: #222224;
+    font-size: 1.4em;
+    text-align: left;
+    
+    
 }
+
+#About_Me, #Work_Experience, #Projects, #Contact {
+    text-align: center;
+    font-size: 1.9em;
+}
+
+#About_Me {
+    margin-top: .75em;
+    margin-bottom: 2px;
+}
+
+#Projects, #Work_Experience, #Contact {
+    margin-top: 2em;
+    margin-bottom: 2px;
+}
+
 
 article {
     padding: 2em;
     width: 75%;
 }
 
+/*form {
+    width: 400px;
+    height: 600px;
+    padding: 10px;
+    margin: 10px;
+    background-color: white;
+    border: solid 1px #ccc;
+    box-sizing: border-box;
+}*/
+
+.form {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    border: solid 1px #222224;
+    padding: 15px;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #cccccc;
+}
+
+input[type=text] {
+    border: solid 1px #222224;
+    border-radius: 5px;
+    height: 25px;
+    width: 100%;
+    /*width: 100%; - didn't work*/
+}
+
+input[type=email] {
+        border: solid 1px #222224;
+        border-radius: 5px;
+        height: 25px;
+        width: 100%;
+        /*width: 100%; - didn't work*/
+    }
+
+
+textarea {
+    border: solid #222224 1px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+input[type=submit] {
+    border: solid #222224 1px;
+    border-radius: 20px;
+    height: 30px;
+    width: 100%;
+    background-color: #4f80db;
+    font-size: 1em;
+    color:#222224;
+}
+
+
 footer {
     padding: 15px;
+    text-align: center; 
 }
+
+/* @media only screen and (max-width:768px) 
+    !changed back to the button#hamburgerBtn 
+    to see what happens!
+    .hamburger {
+        display: block;
+        
+    }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }*/
+
+    /*.nav-menu {
+        /*position: fixed;
+        list-style: none;
+        /*left: 100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #cccccc;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;   
+    }*/
+
+@media only screen and (max-width:768px)  {
+    .nav-menu {
+        position: fixed;
+        left: -100%; /*-when I tried this, it put a gray block on
+        the side and it stayed there*/
+        background-color: #cccccc;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav-item {
+        margin: 16px 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+    
+}  
+    
+
+    
 
 @media only screen and (min-width: 768px) {
     main {
         display: flex;
+        flex-direction: column;
+        }
+    
+    #hamburgerBtn {
+        display: none;
+    }
+
+    .nav-menu {
+        display: inline;
+        margin-bottom: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        width: 100%; /*still having dashed lines in half of the container*/
+        justify-content: flex-end;
+    }
+
+    .nav-item {
+        margin: 16px 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+}
+
+
+
+@media only screen and (min-width: 1024px) {
+    #hamburgerBtn {
+        display: none;
+    }
+
+    body {
+        
+        padding-left: 5%;
+        padding-right: 5%;
     }
 }
