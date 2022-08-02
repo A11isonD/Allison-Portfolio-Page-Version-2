@@ -50,50 +50,54 @@
        
         <img src="Images/OregonBeachCropped.jpeg" class="banner" alt="OregonBeach">
         
-        <article>
-        <h2 id="About_Me">About Me</h2>
-        <p>Mattis pellentesque id nibh tortor. Cras pulvinar mattis nunc sed blandit libero volutpat sed. Metus vulputate eu scelerisque felis. Cursus turpis massa tincidunt dui ut. Risus pretium quam vulputate dignissim. </p>
+        <section>
+            <article>
+                <h2 id="About_Me">About Me</h2>
+                <p>Mattis pellentesque id nibh tortor. Cras pulvinar mattis nunc sed blandit libero volutpat sed. Metus vulputate eu scelerisque felis. Cursus turpis massa tincidunt dui ut. Risus pretium quam vulputate dignissim. </p>
+            </article>
+            
+            <article>
+                <h2 id="Projects">Projects</h2>
+                <p>Risus commodo viverra maecenas accumsan lacus vel facilisis volutpat. Lectus vestibulum mattis ullamcorper velit. Dolor sit amet consectetur adipiscing elit ut aliquam purus sit. Ac placerat vestibulum lectus mauris. </p>
+            </article>
 
-        
-        <h2 id="Projects">Projects</h2>
-        <p>Risus commodo viverra maecenas accumsan lacus vel facilisis volutpat. Lectus vestibulum mattis ullamcorper velit. Dolor sit amet consectetur adipiscing elit ut aliquam purus sit. Ac placerat vestibulum lectus mauris. </p>
-        
-        
-        <h2 id="Work_Experience">Work Experience</h2>
-        <p>Imperdiet dui accumsan sit amet nulla facilisi. Ac tortor dignissim convallis aenean et tortor at risus viverra. Tortor aliquam nulla facilisi cras fermentum. Arcu non sodales neque sodales ut etiam. Est pellentesque elit ullamcorper dignissim. </p>
-           
-
-        <h2 id="Contact">Get in Touch</h2>
-        <div class="form">
-            <form action="mailto:allisonkdobbs@gmail.com" method="get"></form>
-                <div class="name">
-                    <label for="name"></label>
-                    <input type="text" placeholder="Your name" id="name" name="name" autofocus required>
-                    <!--<small class="error"></small>-->
-                </div>
-                <br>
-                <div class="email">
-                    <label for="email"></label>
-                    <input type="email" placeholder="Your email" id="email" name="email" autofocus required>
-                    <!--<small class="error"></small>-->
-                    <!--?Use pattern attribute - ?  -->
-                </div>
-                <br>
-                <div class="Your_message">
-                    <label for="Your_message"></label><br>
-                    <textarea name="Your_message" id="Your_message" cols="30" rows="10" placeholder="Enter your message here..." autofocus required></textarea>
-                    <!--<small class="error"></small>-->
-                </div>
-                <br>
-                <div class="submit_button_container">
-                    <!--<button id="submit" type="submit">Send</button>-->
-                    <input type="submit" value="Send Message">
-                    <button type="button" onclick="alert('Success!')">Message sent!</button>
-                    <p id="success"></p>
-                </div>
-            </form>
-        </div>   
-        </article>
+            <article>
+                <h2 id="Work_Experience">Work Experience</h2>
+                <p>Imperdiet dui accumsan sit amet nulla facilisi. Ac tortor dignissim convallis aenean et tortor at risus viverra. Tortor aliquam nulla facilisi cras fermentum. Arcu non sodales neque sodales ut etiam. Est pellentesque elit ullamcorper dignissim. </p>
+            </article>
+            
+            <article>
+                <h2 id="Contact">Get in Touch</h2>
+                <div class="form">
+                    <form id="contact_form">
+                        <div class="name">
+                            <label for="name"></label>
+                            <input type="text" placeholder="Your name" id="name" name="name" autofocus required>
+                            <!--<small class="error"></small>-->
+                        </div>
+                        <br>
+                        <div class="email">
+                            <label for="email"></label>
+                            <input type="email" placeholder="Your email" id="email" name="email" autofocus required>
+                            <!--<small class="error"></small>-->
+                            <!--?Use pattern attribute - ?  -->
+                        </div>
+                        <br>
+                        <div class="Your_message">
+                            <label for="Your_message"></label><br>
+                            <textarea name="Your_message" id="Your_message" cols="30" rows="10" placeholder="Enter your message here..." autofocus required></textarea>
+                            <!--<small class="error"></small>-->
+                        </div>
+                        <br>
+                        <div class="submit_button_container">
+                            <!--<button id="submit" type="submit">Send</button>-->
+                            <input type="submit" value="Send Message">
+                            <p id="success"></p>
+                        </div>
+                    </form>
+                </div>  
+            </article> 
+        </section>
     </main>
 
     <footer>
@@ -102,15 +106,6 @@
     </footer>
 
     <script src="menuToggle.js" type="text/javascript"></script>
-    <script>
-        window.addEventListener("DOMContentLoaded", function(e) {
-            console.log("The page is loaded.");
-
-            let btn = document.querySelector("#hamburgerBtn");
-            btn.addEventListener("click", function(e) {
-                console.log("The button was clicked.");
-            });
-        });
-    </script>
+    <script src="home.js" type="text/javascript"></script>
 </body>
 </html>
