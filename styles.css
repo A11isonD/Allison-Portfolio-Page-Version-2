@@ -215,8 +215,6 @@ nav ul {
 
 main {
     display: block;
-    background-color:cccccc;/* ? Maybe make this like a table with alt colors
-    The video puts a repeated bg image here*/
     padding-top: 2em;
     padding-bottom: 3em;
     min-height: 85%;
