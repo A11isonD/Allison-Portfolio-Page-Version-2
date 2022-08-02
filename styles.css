@@ -17,7 +17,6 @@ body {
 
 header {
     display: block;
-    margin-top: 40px;
     top: 0;
     right: 0;
     /*Note: Pluralsight puts left margin at 0 b/c they want the links on 
@@ -88,18 +87,12 @@ with HTML, CSS, and JavaScript*/
 .navbar {
     min-height: 70px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     padding: 0 24px;
 }
 
-.nav-menu {
-    display: flex;
-    justify-content: flex-end;
-    align-items:;
-    gap: 60px;
 
-}
 
 .nav-link {
     transition: 0.5s ease;
@@ -121,6 +114,31 @@ with HTML, CSS, and JavaScript*/
     /*margin-top: 0;
     margin-right: 0;*/
 }
+
+.nav-menu {
+    position: fixed;
+    left: -150%; 
+    background-color: #cccccc;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+.nav-item {
+    margin: 16px 0;
+}
+
+.nav-menu.active {
+    left: 0;
+}
+
+
 
 
 /* !Instead of this, I'm reinstating my original hamburgerBtn 
@@ -221,6 +239,11 @@ p {
     
 }
 
+section {
+    display: flex;
+    flex-direction: column;
+}
+
 #About_Me, #Work_Experience, #Projects, #Contact {
     text-align: center;
     font-size: 1.9em;
@@ -239,7 +262,11 @@ p {
 
 article {
     padding: 2em;
-    width: 75%;
+    
+}
+
+section article:last-of-type {
+    flex-basis: 100%;
 }
 
 /*form {
@@ -335,32 +362,7 @@ footer {
         transition: 0.3s;   
     }*/
 
-@media only screen and (max-width:768px)  {
-    .nav-menu {
-        position: fixed;
-        left: -100%; /*-when I tried this, it put a gray block on
-        the side and it stayed there*/
-        background-color: #cccccc;
-        top: 70px;
-        gap: 0;
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-        transition: 0.3s;
-    }
-
-    .nav-item {
-        margin: 16px 0;
-    }
-
-    .nav-menu.active {
-        left: 0;
-    }
-    
-}  
-    
-
-    
+  
 
 @media only screen and (min-width: 768px) {
     main {
@@ -373,13 +375,16 @@ footer {
     }
 
     .nav-menu {
-        display: inline;
+        display: flex;
         margin-bottom: 0;
         padding: 0;
-        display: flex;
         flex-direction: row;
         width: 100%; /*still having dashed lines in half of the container*/
         justify-content: flex-end;
+        gap: 60px;
+        position: unset;
+        left: unset;
+        top: unset;
     }
 
     .nav-item {
@@ -402,5 +407,15 @@ footer {
         
         padding-left: 5%;
         padding-right: 5%;
+    }
+    
+    section {
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    article {
+        flex: 1 1 400px;
     }
 }
