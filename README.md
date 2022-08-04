@@ -3,7 +3,7 @@
 This project consists of my portfolio website that demonstrates the HTML, CSS, and JavaScript skills I learned in Part 1 of Code Louisville's Web Development course.  Its intended purpose is for networking and the targeted audience is potential employers.  I will also use it as a platform to display future projects as I gain more experience in coding.  
 
 
-To run this project, copy the link to my Github repository (https://github.com/A11isonD/Allison-Portfolio-Page-Version-2.git) titled "Allison-Portfolio-Page-Version-2".  In addition to this README file, this link contains: index.html, styles.css, menuToggle.js, and home.js.  
+To run this project, please copy the link to my Github repository (https://github.com/A11isonD/Allison-Portfolio-Page-Version-2.git) titled "Allison-Portfolio-Page-Version-2".  In addition to this README file, this link contains: index.html, styles.css, menuToggle.js, and home.js.  
 
 
 My project contains three CSS and JavaScript features from the required list and two media queries.  I will now describe the features and media queries:  
